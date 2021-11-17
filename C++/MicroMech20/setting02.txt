@@ -1,0 +1,53 @@
+int		maxNrBalls		= 5000000;		// number of balls
+double	minRadius		= 0.00047;	// minimum radius of the balls
+double	maxRadius		= 0.00051;	// radius of the balls
+
+/*
+ *
+ *             Y ^
+ *               |
+ *        ceilY -|          -----------------------------------
+ *               |   INLET |->                                 |
+ *  inletFloorY _|         |______________                     | OUTLET
+ *               |                        |                    |
+ * outletFloorY _|                        |____________________|
+ *               |
+ *                ---------|--------------|--------------------|------>
+ *                      inletX         tresholdX           outletX    X
+ *
+ */
+double	ceilY			= 0.0101;	// upper point in y direction
+double	inletFloorY		= 0.0049;	// lower point in y direction at the inlet
+double	outletFloorY	= 0.0;		// lower point in y direction at the outlet
+double	inletX			= 0.0;		// inlet in x direction
+double	tresholdX		= 0.02;		// treshold position in x direction
+double	outletX			= 0.08;		// outlet in x direction
+
+
+// settings for the dynamics
+// -------------------------
+double	density			= 1.23;		// kg/m³
+double	ballMass		= 0.001;//3.5*ballRadius*ballRadius*density;		// mass of one ball
+double	k				= 1.25E5;	// linear spring constant of the contact
+double	c				= 0.1;		// damping constant for the spring
+double	vMean			= 1;	// mean velocity in m/s
+double	angle			= 180;		// angle in which gravity works in degrees
+CPair	gravity = ZEROPAIR;//GRAVITY*CPair(cosDeg(angle),sinDeg(angle));
+
+// state variable for the simulation
+// ---------------------------------
+bool	stop			= false;	// autorun on or off
+int		nrShows			= 0;		// to organise when we have to draw the scene
+const int showTime		= 1;		// draw every 10 calculations
+double	time			= 0;		// the simulation time
+double	dt				= 0.6e-3;	// timestep
+double	dt_impact		= (PI/sqrt(k/ballMass-c/ballMass))/10.0;	// 10 steps for one collision function of m and k
+double	dt_overlap;					// adjust timestep to max speed
+
+// the space that is displayed in the window
+// -----------------------------------------
+double	xmin			= inletX-0.0005;
+double	xmax			= outletX+0.0005;
+double	ymin			= outletFloorY-0.5*(outletX-inletX);
+double	ymax			= outletFloorY+0.5*(outletX-inletX);
+const char* fileName = "output";
