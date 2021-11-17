@@ -1,0 +1,49 @@
+-cornerpoints-
+nrcorners 16
+1 0 0
+2 0.001 0
+3 0.002 0
+4 0 0.001
+5 0.001 0.001
+6 0.002 0.001
+7 0.0005 0.002
+8 0.0015 0.002
+9 0.0005 0.003
+10 0.0015 0.003
+11 0 0.004
+12 0.001 0.004
+13 0.002 0.004
+14 0 0.005
+15 0.001 0.005
+16 0.002 0.005
+-end-cornerpoints-
+
+-configuration-
+nrcells 5
+1 nrcorners 5 numbers 4 7 5 2 1
+2 nrcorners 5 numbers 5 8 6 3 2
+3 nrcorners 6 numbers 9 12 10 8 5 7
+4 nrcorners 5 numbers 14 15 12 9 11
+5 nrcorners 5 numbers 15 16 13 10 12
+-end-configuration-
+
+-northface-
+nrcorners 3
+numbers 14 15 16 
+-end-northface-
+
+-eastface-
+nrcorners 6
+numbers 3 6 8 10 13 16 
+-end-eastface-
+
+-southface-
+nrcorners 3
+numbers 1 2 3 
+-end-southface-
+
+-westface-
+nrcorners 6
+numbers 1 4 7 9 11 14 
+-end-westface-
+

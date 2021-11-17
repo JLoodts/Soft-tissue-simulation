@@ -1,0 +1,33 @@
+-cornerpoints-
+nrcorners 5
+0.3 0.3
+0.5 0.1
+0.7 0.4
+0.8 0.8
+0.5 0.9 
+-end-cornerpoints-
+
+-configuration-
+nrcells 1
+1 nrcorners 5 numbers  1  2 3 4 5
+-end-configuration-
+
+-northface-
+nrcorners 1
+numbers 1 
+-end-northface-
+
+-westface-
+nrcorners 2
+numbers 4 5
+-end-westface-
+
+-southface-
+nrcorners 1
+numbers 3
+-end-southface-
+
+-eastface-
+nrcorners 1
+numbers 2
+-end-eastface-
