@@ -1,0 +1,16 @@
+-parameters-
+mass				1.86e-9
+k					1439
+ksecundary			700
+kpressure			5e7
+g					0.0
+dt					1e-7
+forcemode			1
+scalefactorforforces 1
+showforces			0
+showtime			50
+relaxationtime		100
+displacementspeed	0.5
+maxstrain			2.5
+crosssectionalarea	3.6e-7
+-end-parameters-
