@@ -1,0 +1,81 @@
+-cornerpoints-
+nrcorners 10
+1 0 0
+2 0 0.003
+3 0.001 0.00075
+4 0.00125 0.00175
+5 0.0015 0.00075
+6 0.0015 0.00175
+7 0.002 0.00075
+8 0.0025 0.00175
+9 0.003 0
+10 0.003 0.003
+-end-cornerpoints-
+
+-cellboundarysprings-
+nrsprings 12
+1 2 1
+2 1 3
+3 3 5
+4 5 7
+5 7 9
+6 9 10
+7 10 8
+8 8 6
+9 6 4
+10 4 2
+11 4 3
+12 8 7
+-end-cellboundarysprings-
+
+-planeboundarysprings-
+nrsprings 4
+1 4 5
+2 7 6
+3 8 9
+4 3 2
+-end-planeboundarysprings-
+
+-configuration-
+nrcells 3
+1  nrcorners 4 numbers 1 2 4 3 
+   nrsprings 4 numbers 2 1 10 11 
+2  nrcorners 6 numbers 5 3 4 6 8 7 
+   nrsprings 6 numbers 4 3 11 9 8 12 
+3  nrcorners 4 numbers 8 10 9 7 
+   nrsprings 4 numbers 12 7 6 5 
+-end-configuration-
+
+-eastface-
+nrcorners 2
+numbers 10 9 
+-end-eastface-
+
+-westface-
+nrcorners 2
+numbers 2 1 
+-end-westface-
+
+-cellboundarycrosssection-
+nrsprings 2
+numbers 8 4 
+-end-cellboundarycrosssection-
+
+-planeboundarycrosssection-
+nrsprings 1
+numbers 2 
+-end-planeboundarycrosssection-
+
+-northandsouth-
+northnr 6
+southnr 5
+-end-northandsouth-
+
+-grid-
+minx 0
+miny 0
+maxx 0.003
+maxy 0.00325
+nrgridpointsx 13
+nrgridpointsy 13
+-end-grid-
