@@ -1,0 +1,51 @@
+-cornerpoints-
+nrcorners 9
+1 0.000188214 0.00147171
+2 0.000188214 0.000999176
+3 0.000188214 0.000505294
+4 0.00459686 0.00124036
+5 0.00466607 0.000858795
+6 0.00467277 0.000429869
+7 0.00905212 0.00108453
+8 0.00905212 0.000618871
+9 0.00905212 0.000148299
+-end-cornerpoints-
+
+-configuration-
+nrcells 2
+1  nrcorners 4 numbers 1 7 8 2 
+2  nrcorners 4 numbers 2 8 9 3 
+-end-configuration-
+
+-northface-
+nrcorners 2
+numbers 1 7 
+-end-northface-
+
+-eastface-
+nrcorners 3
+numbers 7 8 9 
+-end-eastface-
+
+-southface-
+nrcorners 2
+numbers 3 9 
+-end-southface-
+
+-westface-
+nrcorners 3
+numbers 1 2 3 
+-end-westface-
+
+-springsandpressure-
+cellnr 1
+ratiopxv 1.66321e-005
+restpressure 4
+restlength 0.00887236 0.000465659 0.00887206 0.000472534 
+
+cellnr 2
+ratiopxv 1.70977e-005
+restpressure 4
+restlength 0.00887206 0.000470572 0.00887109 0.000493882 
+
+-end-springsandpressure-
